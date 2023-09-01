@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+/* styles.css */
+.map {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 70px); /* Adjust cell width */
+  gap: 2px; /* Adjust gap between cells */
+  background-color: lightgray;
+  padding: 10px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 70px); /* Adjust cell width */
+  gap: 2px; /* Adjust gap between cells */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cell {
+  width: 70px; /* Adjust cell width */
+  height: 70px; /* Adjust cell height */
+  border: 1px solid gray;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.mountain {
+  background-color: #6D4C3D;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.treasure {
+  background-color: gold;
+  font-size: 12px;
+}
+
+.plain  {
+  background-color: #8FE388;
+  display: flex;
+  flex-direction: column;
+}
+
+.cell.treasure.N {
+  transform: rotate(0deg);
+  display: flex;
+  flex-direction: column;
+}
+
+.cell.treasure.E {
+  transform: rotate(90deg);
+  display: flex;
+  flex-direction: column;
+}
+
+.cell.treasure.S {
+  transform: rotate(180deg);
+  display: flex;
+  flex-direction: column;
+}
+
+.cell.treasure.W {
+  transform: rotate(-90deg);
+  display: flex;
+  flex-direction: column;
+}
+
+.body-icon {
+  width: 50px;
+  height: 50px;
 }
